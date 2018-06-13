@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<context id="testTables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+			<!--	connectionURL="jdbc:mysql://192.168.1.16:3306/usercenter" userId="root"
+			password="xiaokong">  -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://47.97.184.82:3306/xiaokong_shop_dev" userId="xiaokong"
+			password="15KongDevKwj2-">
+		</jdbcConnection>
+		<!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和 
+			NUMERIC 类型解析为java.math.BigDecimal -->
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- targetProject:生成PO类的位置  com.xiaokong.usercenter.supplier.domain-->
+		<javaModelGenerator targetPackage="com.github.yexiaoxiaogo.generatorSqlMap.xiaokong_shop_member.domain"
+			targetProject=".\src\main\java">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+			<!-- 从数据库返回的值被清理前后的空格 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+        <!-- targetProject:mapper映射文件生成的位置 com.xiaokong.usercenter.supplier.mapper -->
+		<sqlMapGenerator targetPackage="com.github.yexiaoxiaogo.generatorSqlMap.xiaokong_shop_member.mapper" 
+			targetProject=".\src\main\java">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		<!-- targetPackage：mapper接口生成的位置  com.xiaokong.usercenter.supplier.mapper-->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.github.yexiaoxiaogo.generatorSqlMap.xiaokong_shop_member.mapper" 
+			targetProject=".\src\main\java">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		
+
+		<!-- 指定数据库表 -->	
+<!--  		<table schema="" tableName="platform_department"></table> -->
+<!--  		<table schema="" tableName="platform_log"></table>   -->
+<!-- 		<table schema="" tableName="platform_right"></table> -->
+<!-- 		<table schema="" tableName="platform_role"></table> -->
+<!-- 		<table schema="" tableName="platform_model"></table> -->
+<!-- 		<table schema="" tableName="platform_role_right_relation"></table>   -->
+<!-- 		<table schema="" tableName="platform_user"></table>  -->
+<!-- 		<table schema="" tableName="platform_user_department_relation"></table> -->
+<!-- 		<table schema="" tableName="platform_user_role_relation"></table>  -->
+<!-- 		<table schema="" tableName="platform_audit_record"></table>  -->
+		
+		
+		
+		<!-- 指定数据库表 -->
+<!-- 		<table schema="" tableName="supplier_apply_join_company"></table>  -->
+<!--  		<table schema="" tableName="supplier_user"></table> -->
+<!-- 		<table schema="" tableName="supplier_company"></table>  -->
+<!-- 		<table schema="" tableName="supplier_user_shop_relation"></table>   -->
+<!-- 		<table schema="" tableName="supplier_right"></table> -->
+<!-- 		<table schema="" tableName="supplier_role"></table>  -->
+<!-- 		<table schema="" tableName="supplier_role_right_relation"></table> -->
+<!-- 		<table schema="" tableName="supplier_user_role_relation"></table>   -->
+		
+		
+		
+		<!-- 指定数据库表 -->
+<!-- 		<table schema="" tableName="landlord_apply_join_company"></table>  -->
+<!-- 	    <table schema="" tableName="landlord_company"></table>  -->
+<!-- 		<table schema="" tableName="landlord_personal"></table> -->
+<!-- 		<table schema="" tableName="landlord_user"></table> -->
+<!-- 		<table schema="" tableName="landlord_user_company_relation"></table> -->
+<!-- 		<table schema="" tableName="landlord_role"></table> -->
+<!-- 		<table schema="" tableName="landlord_right"></table> -->
+<!-- 		<table schema="" tableName="landlord_role_right_relation"></table> -->
+<!-- 		<table schema="" tableName="landlord_user_role_relation"></table>   -->
+		
+		<!-- 指定数据库表 -->
+<!-- 		<table schema="" tableName="wms_admin_warehouse_relation"></table>  -->
+<!-- 		<table schema="" tableName="area"></table>  -->
+<!-- 		<table schema="" tableName="wms_user"></table>  -->
+<!-- 		<table schema="" tableName="wms_user_role_relation"></table>  -->
+<!-- 		<table schema="" tableName="wms_user_warehouse_relation"></table>  -->
+<!-- 		<table schema="" tableName="wms_warehouse"></table>  -->
+<!-- 		<table schema="" tableName="wms_supplier_warehouse_relation"></table> -->
+
+<!-- 		<table schema="" tableName="Product"></table> -->
+<!--         <table schema="" tableName="Store"></table> -->
+<!--         <table schema="" tableName="Users"></table> -->
+<!--         <table schema="" tableName="Consultation"></table> -->
+<!--         <table schema="" tableName="Message"></table> -->
+<!--         <table schema="" tableName="MessageGroup"></table>            -->
+<!--         <table schema="" tableName="Receiver"></table> -->
+<!--         <table schema="" tableName="Review"></table> -->
+<!--         <table schema="" tableName="Aftersales"></table> -->
+<!--         <table schema="" tableName="Area"></table> -->
+<!--         <table schema="" tableName="OrderShipping"></table> -->
+<!--         <table schema="" tableName="Order"></table> -->
+<!--         <table schema="" tableName="Coupon"></table> -->
+<!--         <table schema="" tableName="CouponCode"></table> -->
+<!--         <table schema="" tableName="PointLog"></table> -->
+		<table schema="" tableName="AftersalesSetting"></table>
+        <table schema="" tableName="IdGenerator"></table>
+
+
+		
+		
+	</context>
+</generatorConfiguration>
