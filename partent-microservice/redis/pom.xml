@@ -9,6 +9,7 @@
   </parent>
   <groupId>com.github.yexiaoxiaogo</groupId>
   <artifactId>redis</artifactId>
+  <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>redis</name>
   <url>http://maven.apache.org</url>
@@ -17,10 +18,8 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-redis</artifactId>
+	</dependency>
   </dependencies>
 </project>
