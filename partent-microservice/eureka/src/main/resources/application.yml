@@ -1,0 +1,17 @@
+server:
+    port: 8888
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname:127.0.0.1}:${server.port}/eureka/
+    ister-with-eureka: false # 当前的微服务不注册到eureka之中
+    fetch-registry: false       # 不通过eureka获取注册信息
+  instance:
+    hostname: localhost
+    prefer-ip-address: true        # 定义Eureka实例所在的主机名称
+
+
+
